@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Milk Store App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Milk Store 🥛</h1>
+
+  <div class="container">
+    <h2>Customer Order Form</h2>
+    <form id="orderForm">
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="tel" id="mobile" placeholder="Enter your mobile number" required>
+
+      <label for="quantity">Select Quantity:</label>
+      <select id="quantity" required>
+        <option value="">--Select--</option>
+        <option value="0.25">1/4 Liter - ₹10</option>
+        <option value="0.5">1/2 Liter - ₹20</option>
+        <option value="0.75">3/4 Liter - ₹30</option>
+        <option value="1">1 Liter - ₹40</option>
+      </select>
+
+      <button type="submit">Place Order</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <h2>Admin Panel (Approve Orders)</h2>
+    <div id="orderList"></div>
+    <button onclick="calculateMonthly()">Calculate Monthly Bill</button>
+    <div id="monthlyBill"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
